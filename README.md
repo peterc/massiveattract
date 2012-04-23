@@ -3,6 +3,8 @@ Massive Attract
 
 A simple HTML5 and Canvas game (leaning on SoundManager 2 for sounds and music) where you're helping out some people on a tiny planet that's getting smaller for some silly reason (let's say over-mining). They need some mass so they don't keep floating away into space, so deflect the asteroids into their planet to increase its mass. They'll deal with the cleanup of dead people, atmospheric pollution, etc, so feel no guilt.
 
+Play it live at http://no.gd/massiveattract.html
+
 The Excuses
 -----------
 
