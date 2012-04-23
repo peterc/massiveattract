@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="description" content="A game for Ludum Dare 23">
+    <meta name="author" content="Peter Cooper">
+    
+    <title>Massive Attract</title>
+    
+    <!-- link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css' -->
+    <link rel="stylesheet" href="css.css" />
+    
+    <script src="vendor/jquery.min.js"></script>
+    <script src="vendor/stats.js"></script>
+    <!-- script src="vendor/underscore-min.js"></script -->
+    <script src="vendor/sm2/script/soundmanager2-nodebug.js"></script>
+    <!-- script src="misc/chromeRequired.js"></script -->
+    
+    <script src="game/game.js"></script>    
+    <script src="game/assets.js"></script>    
+    <script src="game/sound.js"></script>
+    <script src="game/keyboard.js"></script>
+    <script src="game/canvas.js"></script>    
+    <script src="game/misc.js"></script>
+
+    <script src="game/asteroid.js"></script>
+    <script src="game/planet.js"></script>
+
+    <script src="game/state.js"></script>
+    <script src="game/loadingState.js"></script>
+    <script src="game/mainState.js"></script>
+    <script src="game/otherState.js"></script>
+    <script src="game/lostState.js"></script>
+    <script src="game/winState.js"></script>
+  </head>
+
+  <body>
+    <div id="page">
+      <canvas id="c"></canvas>
+      <p>A Ludum Dare 23 entry by <a href="http://twitter.com/peterc">@peterc</a>. No sound? Enable Flash.<br />I couldn't come up with an idea so wrote a game engine instead (and learnt lots!)<br />The above game is a last minute attempt at something I could actually enter ;-)<br />All sound and music is original by me and done during the contest.</p>
+    </div>
+    
+    <script>
+      $(function() {
+        var game = new Game();
+        game.addState('loading', loadingState);
+        game.addState('main', mainState);
+        game.addState('lost', lostState);
+        game.addState('win', winState);
+        game.init().start();
+      });
+    </script>
+  </body>
+</html>
